@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bookmyshow-clone
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn bookmyseat.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: bookmyseat.settings
